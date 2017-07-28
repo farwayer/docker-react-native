@@ -14,5 +14,5 @@ RUN pacman -Sy && pacman --noconfirm -S yarn npm watchman jdk8-openjdk\
  android-sdk-build-tools-23.0.3 android-sdk-build-tools-25.0.2\
  android-google-repository\
  && yes | pacman -Scc && rm -rf /usr/lib/ruby/gems/*/{cache,doc}\
- /usr/share/{doc,man,locale}
+ /usr/share/{doc,man,locale} && mkdir /var/run/watchman
 ENV ANDROID_HOME=/opt/android-sdk
