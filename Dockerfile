@@ -15,4 +15,4 @@ RUN pacman -Sy && pacman --noconfirm -S yarn npm watchman jdk8-openjdk\
  android-google-repository\
  && yes | pacman -Scc && rm -rf /usr/lib/ruby/gems/*/{cache,doc}\
  /usr/share/{doc,man,locale}
-RUN printf 'source /etc/profile' >> ~/.bashrc
+RUN printf '. /etc/profile' >> ~/.bash_profile
