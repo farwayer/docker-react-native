@@ -23,7 +23,7 @@ All package versions are recent, unless otherwise specified.
 
 - latest
 
-## Platform tools
+### Platform tools
 
 - latest
 
