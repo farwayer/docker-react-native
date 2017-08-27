@@ -5,6 +5,7 @@ RUN printf "[multilib]\n"\
 "Include=/etc/pacman.d/mirrorlist\n"\
 "[mobile]\n"\
 'Server=https://farwayer.keybase.pub/arch/$repo' >> /etc/pacman.conf
+RUN pacman-key --init
 RUN sed -i 's/timeout=10/timeout=120/' /etc/pacman.d/gnupg/gpg.conf
 RUN pacman-key --keyserver na.pool.sks-keyservers.net -r 7943315502A936D7
 RUN pacman-key --lsign-key 7943315502A936D7
