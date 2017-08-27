@@ -5,8 +5,9 @@ RUN printf "[multilib]\n"\
 "Include=/etc/pacman.d/mirrorlist\n"\
 "[mobile]\n"\
 'Server=https://farwayer.keybase.pub/arch/$repo' >> /etc/pacman.conf
-RUN pacman-key --keyserver na.pool.sks-keyservers.net -r 7943315502A936D7\
- && pacman-key --lsign-key 7943315502A936D7
+RUN sed -i 's/timeout=10/timeout=120/' /etc/pacman.d/gnupg/gpg.conf
+RUN pacman-key --keyserver na.pool.sks-keyservers.net -r 7943315502A936D7
+RUN pacman-key --lsign-key 7943315502A936D7
 RUN pacman -Sy && pacman --noconfirm -S yarn npm watchman jdk8-openjdk\
  fastlane python2 make gcc git\
  android-platform android-platform-23 android-platform-24 android-platform-25\
