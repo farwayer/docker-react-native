@@ -45,6 +45,7 @@ react-swipeable-views, fetch-blob, nachos-ui)
 - **25.0.2** (camera, video, native-navigation, device-info, fcm)
 - **25.0.3** (maps)
 - **26.0.1**
+- **26.0.2**
 
 ### Support library
 
