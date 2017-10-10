@@ -6,8 +6,7 @@ RUN printf "[multilib]\n"\
 "[mobile]\n"\
 'Server=https://farwayer.keybase.pub/arch/$repo' >> /etc/pacman.conf
 RUN pacman-key --init
-RUN sed -i 's/timeout=10/timeout=300/' /etc/pacman.d/gnupg/gpg.conf
-RUN pacman-key -r 7943315502A936D7
+RUN until pacman-key -r 7943315502A936D7; do :; done
 RUN pacman-key --lsign-key 7943315502A936D7
 RUN pacman -Sy && pacman --noconfirm -S yarn npm watchman jdk8-openjdk\
  fastlane python2 make gcc git\
