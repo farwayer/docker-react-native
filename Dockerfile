@@ -4,10 +4,8 @@ MAINTAINER farwayer <farwayer@gmail.com>
 RUN printf "[multilib]\n"\
 "Include=/etc/pacman.d/mirrorlist\n"\
 "[mobile]\n"\
+"SigLevel = Never"\
 'Server=https://farwayer.keybase.pub/arch/$repo' >> /etc/pacman.conf
-RUN pacman-key --init
-RUN pacman-key --keyserver ha.pool.sks-keyservers.net -r 7943315502A936D7
-RUN pacman-key --lsign-key 7943315502A936D7
 RUN pacman --noconfirm -Sy yarn npm watchman jdk8-openjdk git\
  fastlane python2 make gcc\
  android-platform\
