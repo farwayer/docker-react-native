@@ -8,7 +8,7 @@ RUN printf "[multilib]\n"\
 RUN pacman-key --init
 RUN pacman-key --keyserver ha.pool.sks-keyservers.net -r 7943315502A936D7
 RUN pacman-key --lsign-key 7943315502A936D7
-RUN pacman -Sy && pacman --noconfirm -S yarn npm watchman jdk8-openjdk git\
+RUN pacman --noconfirm -Sy yarn npm watchman jdk8-openjdk git\
  fastlane python2 make gcc\
  android-platform\
  android-platform-23\

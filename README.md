@@ -45,7 +45,7 @@ All package versions are recent for building date.
 
 You can install extra sdk build tools with pacman:
 ```bash
-pacman -Sy && pacman -S android-sdk-build-tools-26 android-sdk-build-tools-26.0.3
+pacman --noconfirm -Sy android-sdk-build-tools-26 android-sdk-build-tools-26.0.3
 ```
 (x.0.0 is named `android-sdk-build-tools-x`)
 
@@ -65,7 +65,7 @@ allprojects {
 
 ...or install with pacman:
 ```bash
-pacman -Sy && pacman -S android-support-repository
+pacman --noconfirm -Sy android-support-repository
 ```
 
 
@@ -112,7 +112,7 @@ All package versions are recent, unless otherwise specified.
 
 You can install extra sdk build tools with pacman:
 ```bash
-pacman -Sy && pacman -S android-sdk-build-tools-26 android-sdk-build-tools-26.0.3
+pacman --noconfirm -Sy android-sdk-build-tools-26 android-sdk-build-tools-26.0.3
 ```
 (x.0.0 is named `android-sdk-build-tools-x`)
 
@@ -129,11 +129,11 @@ You should use [fastlane](https://fastlane.tools/). It's really cool!
 
 Archlinux packages can be found [here](https://www.archlinux.org/packages/)
 ```bash
-pacman -Sy && pacman -S android-udev
+pacman --noconfirm -Sy android-udev
 ```  
 
 Some extra packages for mobile development (android-ndk etc.) are available
 [here](https://keybase.pub/farwayer/arch/mobile/)
 ```bash
-pacman -Sy && pacman -S android-ndk
+pacman --noconfirm -Sy react-native-cli android-ndk
 ```
