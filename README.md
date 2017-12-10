@@ -28,12 +28,12 @@ tools` with `pacman` or use this image as basic for your own image.
 
 All package versions are recent for building date.
 
-- nodejs
-- yarn
-- npm
-- watchman
-- openjdk8
-- git
+- **nodejs**
+- **yarn**
+- **npm**
+- **watchman**
+- **openjdk8**
+- **git**
 
 ### Platforms
 
@@ -74,21 +74,21 @@ pacman -Sy && pacman -S android-support-repository
 Contains much more android platforms, sdk build tools and compilers for npm
 native modules.
 
-## Packages
+### Packages
 
 All package versions are recent, unless otherwise specified.
 
-- nodejs
-- yarn
-- npm
-- watchman
-- openjdk8
-- git
-- fastlane
-- ruby (for fastlane)
-- python2 (for building some npm deps)
-- make (for building some npm deps)
-- gcc (for building some npm deps)
+- **nodejs**
+- **yarn**
+- **npm**
+- **watchman**
+- **openjdk8**
+- **git**
+- **fastlane**
+- **ruby (for fastlane)**
+- **python2 (for building some npm deps)**
+- **make (for building some npm deps)**
+- **gcc (for building some npm deps)**
 
 ### Platforms
 
