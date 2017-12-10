@@ -1,28 +1,20 @@
-React Native builder (android) based on Arch Linux. Android platforms and sdk
-build tools for most popular react-native addons included.
+React Native builder (android) based on Arch Linux. Android platforms and sdk build tools for most popular react-native modules included.
 
-There are two versions of builder: `-min` and full which contains much more
-android platforms and sdk build tools.  
+There are two versions of builder: `-min` and full which contains more android platforms and sdk build tools.  
 
 ## Both images
 
-### SDK
+### Android SDK
 
 - **latest**
 
-### Platform tools
-
-- **latest**
-
-### Google repository
+### Android platform tools
 
 - **latest**
 
 ## Minimal image (-min)
 
-Contains only required packages for building basic projects with no third-party
-modules. In most cases you will need to install extra `platforms` and `sdk build
-tools` with `pacman` or use this image as basic for your own image. 
+Contains only required packages for building basic projects with no third-party modules. In most cases you will need to install extra `platforms` and `sdk build tools` with `pacman` or use this image as basic for your own image. 
 
 ### Packages
 
@@ -45,14 +37,13 @@ All package versions are recent for building date.
 
 You can install extra sdk build tools with pacman:
 ```bash
-pacman --noconfirm -Sy android-sdk-build-tools-26 android-sdk-build-tools-26.0.3
+pacman --noconfirm -Sy android-sdk-build-tools-26.0.3
 ```
 (x.0.0 is named `android-sdk-build-tools-x`)
 
 ### Support library
 
-Support library is available in Google maven repository now. Simply add this
-repository to `android/build.gradle`:
+Support library is available in Google maven repository now. Simply add this repository to `android/build.gradle`:
 ```
 allprojects {
     repositories {
@@ -68,15 +59,21 @@ allprojects {
 pacman --noconfirm -Sy android-support-repository
 ```
 
+### Google repository
+
+Install with pacman:
+```bash
+pacman --noconfirm -Sy android-google-repository
+```
+
 
 ## Full image
 
-Contains much more android platforms, sdk build tools and compilers for npm
-native modules.
+Contains much more android platforms, sdk build tools and compilers for npm native modules.
 
 ### Packages
 
-All package versions are recent, unless otherwise specified.
+All package versions are recent for building date.
 
 - **nodejs**
 - **yarn**
@@ -112,11 +109,15 @@ All package versions are recent, unless otherwise specified.
 
 You can install extra sdk build tools with pacman:
 ```bash
-pacman --noconfirm -Sy android-sdk-build-tools-26 android-sdk-build-tools-26.0.3
+pacman --noconfirm -Sy android-sdk-build-tools-26.0.3
 ```
 (x.0.0 is named `android-sdk-build-tools-x`)
 
 ### Support library
+
+- **latest**
+
+### Google repository
 
 - **latest**
 
@@ -132,8 +133,7 @@ Archlinux packages can be found [here](https://www.archlinux.org/packages/)
 pacman --noconfirm -Sy android-udev
 ```  
 
-Some extra packages for mobile development (android-ndk etc.) are available
-[here](https://keybase.pub/farwayer/arch/mobile/)
+Some extra packages for mobile development (android-ndk etc.) are available [here](https://keybase.pub/farwayer/arch/mobile/)
 ```bash
 pacman --noconfirm -Sy react-native-cli android-ndk
 ```
