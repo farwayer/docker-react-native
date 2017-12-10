@@ -2,6 +2,20 @@ React Native builder (android) based on Arch Linux. Android platforms and sdk bu
 
 There are two versions of builder: `-min` and full which contains more android platforms and sdk build tools.  
 
+
+## Building
+
+If you are using minimal image check 'Android support library' section first.
+
+```bash
+git clone https://.../myproject.git
+cd myproject
+yarn
+cd android
+./gradlew assembleRelease
+```
+ 
+
 ## Both images
 
 ### Android SDK
@@ -14,7 +28,7 @@ There are two versions of builder: `-min` and full which contains more android p
 
 ## Minimal image (-min)
 
-Contains only required packages for building basic projects with no third-party modules. In most cases you will need to install extra `platforms` and `sdk build tools` with `pacman` or use this image as basic for your own image. 
+Contains only required packages for building basic projects with no third-party modules. In most cases you will need to install extra `platforms` and `sdk build-tools` with pacman or use this image as basic for your own image. 
 
 ### Packages
 
@@ -41,7 +55,7 @@ pacman --noconfirm -Sy android-sdk-build-tools-26.0.3
 ```
 (x.0.0 is named `android-sdk-build-tools-x`)
 
-### Support library
+### Android support library
 
 Support library is available in Google maven repository now. Simply add this repository to `android/build.gradle`:
 ```
@@ -82,10 +96,10 @@ All package versions are recent for building date.
 - **openjdk8**
 - **git**
 - **fastlane**
-- **ruby (for fastlane)**
-- **python2 (for building some npm deps)**
-- **make (for building some npm deps)**
-- **gcc (for building some npm deps)**
+- **ruby** (for fastlane)
+- **python2** (for building some npm deps)
+- **make** (for building some npm deps)
+- **gcc** (for building some npm deps)
 
 ### Platforms
 
@@ -128,7 +142,7 @@ You should use [fastlane](https://fastlane.tools/). It's really cool!
 
 ## Installing extra packages
 
-Archlinux packages can be found [here](https://www.archlinux.org/packages/)
+Arch Linux packages can be found [here](https://www.archlinux.org/packages/)
 ```bash
 pacman --noconfirm -Sy android-udev
 ```  
