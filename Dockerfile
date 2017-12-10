@@ -4,7 +4,7 @@ MAINTAINER farwayer <farwayer@gmail.com>
 RUN printf "[multilib]\n"\
 "Include=/etc/pacman.d/mirrorlist\n"\
 "[mobile]\n"\
-"SigLevel = Never"\
+"SigLevel = Never\n"\
 'Server=https://farwayer.keybase.pub/arch/$repo' >> /etc/pacman.conf
 RUN pacman --noconfirm -Sy yarn npm watchman jdk8-openjdk git\
  fastlane python2 make gcc\
