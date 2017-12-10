@@ -8,11 +8,11 @@ const g2js = require('gradle-to-js/lib/parser');
 const groupBy = require('lodash.groupby');
 
 
-const authTokel = process.env.AUTH_TOKEN;
+const authToken = process.env.AUTH_TOKEN;
 
 const client = new ApolloClient({
   link: new HttpLink({uri: 'https://api.github.com/graphql', fetch, headers: {
-    Authorization: `bearer ${authTokel}`,
+    Authorization: `bearer ${authToken}`,
   }}),
   cache: new InMemoryCache(),
 });
