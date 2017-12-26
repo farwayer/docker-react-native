@@ -1,4 +1,4 @@
-FROM pritunl/archlinux:2017-12-16
+FROM pritunl/archlinux:2017-12-23
 MAINTAINER farwayer <farwayer@gmail.com>
 
 RUN printf "[multilib]\n"\
