@@ -7,8 +7,8 @@ RUN printf "[multilib]\n"\
 "SigLevel = Never\n"\
 'Server=https://farwayer.keybase.pub/arch/$repo' >> /etc/pacman.conf
 RUN pacman --noconfirm -Sy yarn npm watchman jdk8-openjdk git\
- android-platform-23\
- android-sdk-build-tools-23.0.1\
+ android-platform-26\
+ android-sdk-build-tools-26.0.3\
  && yes | pacman -Scc\
  && rm -rf /usr/share/{doc,man,locale}\
  && mkdir /var/run/watchman
