@@ -43,15 +43,15 @@ All package versions are recent for building date.
 
 ### Platforms
 
-- **23**
+- **26**
 
 ### SDK build tools
 
-- **23.0.1**
+- **26.0.3**
 
 You can install extra sdk build tools with pacman:
 ```bash
-pacman --noconfirm -Sy android-sdk-build-tools-26.0.3
+pacman --noconfirm -Sy android-sdk-build-tools-25.0.1
 ```
 (x.0.0 is named `android-sdk-build-tools-x`)
 
@@ -107,23 +107,25 @@ All package versions are recent for building date.
 - **24**
 - **25**
 - **26**
-- **latest**
+- **27**
+- **28**
 
 ### SDK build tools
 
 - **23.0.1**
 - **23.0.3**
 - **25.0.0**
-- **25.0.1**
 - **25.0.2**
 - **25.0.3**
 - **26.0.1**
 - **26.0.2**
-- **latest**  
+- **26.0.3**
+- **27.0.3**  
+- **28.0.2**  
 
 You can install extra sdk build tools with pacman:
 ```bash
-pacman --noconfirm -Sy android-sdk-build-tools-26.0.3
+pacman --noconfirm -Sy android-sdk-build-tools-25.0.1
 ```
 (x.0.0 is named `android-sdk-build-tools-x`)
 
