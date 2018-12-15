@@ -1,6 +1,10 @@
 FROM archlinux/base
 MAINTAINER farwayer <farwayer@gmail.com>
 
+# Make pacman to use wget for more reliable downloads
+RUN pacman --noconfirm -Sy wget
+RUN sed -i 's/#VerbosePkgLists/XferCommand = \/usr\/bin\/wget -nv -c -O %o %u/g' /etc/pacman.conf
+
 RUN printf "[multilib]\n"\
 "Include=/etc/pacman.d/mirrorlist\n"\
 "[mobile]\n"\
@@ -28,7 +32,7 @@ RUN pacman --noconfirm --disable-download-timeout -Sy\
  android-sdk-build-tools-28.0.3\
  android-google-repository\
  android-support-repository\
- && yes | pacman -Scc\
+ && yes | pacman -Scc || true\
  && rm -rf /usr/lib/ruby/gems/*/{cache,doc} /usr/share/{doc,man,locale}\
  && mkdir /var/run/watchman
 ENV ANDROID_HOME=/opt/android-sdk
