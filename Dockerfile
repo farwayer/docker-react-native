@@ -11,7 +11,7 @@ RUN printf "[multilib]\n"\
 "SigLevel = Never\n"\
 'Server=https://farwayer.keybase.pub/arch/$repo' >> /etc/pacman.conf
 RUN pacman --noconfirm --disable-download-timeout -Sy\
- yarn npm watchman jdk8-openjdk git\
+ yarn npm watchman jdk8-openjdk git procps-ng\
  fastlane python2 make gcc\
  android-platform-23\
  android-platform-24\
