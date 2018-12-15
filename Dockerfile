@@ -33,6 +33,5 @@ RUN pacman --noconfirm --disable-download-timeout -Sy\
  android-google-repository\
  android-support-repository\
  && yes | pacman -Scc || true\
- && rm -rf /usr/lib/ruby/gems/*/{cache,doc} /usr/share/{doc,man,locale}\
- && mkdir /var/run/watchman
+ && rm -rf /usr/lib/ruby/gems/*/{cache,doc} /usr/share/{doc,man,locale}
 ENV ANDROID_HOME=/opt/android-sdk
