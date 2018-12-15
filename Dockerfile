@@ -24,6 +24,7 @@ RUN pacman --noconfirm -Sy yarn npm watchman jdk8-openjdk git\
  android-sdk-build-tools-26.0.3\
  android-sdk-build-tools-27.0.3\
  android-sdk-build-tools-28.0.2\
+ android-sdk-build-tools-28.0.3\
  android-google-repository\
  android-support-repository\
  && yes | pacman -Scc\
