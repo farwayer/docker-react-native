@@ -122,6 +122,7 @@ All package versions are recent for building date.
 - **26.0.3**
 - **27.0.3**  
 - **28.0.2**  
+- **28.0.3**
 
 You can install extra sdk build tools with pacman:
 ```bash
